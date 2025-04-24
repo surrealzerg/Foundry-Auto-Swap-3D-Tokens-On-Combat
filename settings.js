@@ -129,7 +129,7 @@ class TokenSwapConfig extends FormApplication {
 
 Hooks.on("init", () => {
     console.log("Loaded Auto Swap 3D Tokens on Combat");
-    const MODULE_ID = "swap-3d-tokens-on-combat";
+    const MODULE_ID = "auto-swap-3d-tokens-on-combat";
 
   game.settings.register(MODULE_ID, "playerModels", {
     name: "3D Model Assignments",
