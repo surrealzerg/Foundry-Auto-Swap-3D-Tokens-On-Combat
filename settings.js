@@ -5,7 +5,7 @@ class TokenSwapConfig extends FormApplication {
         return foundry.utils.mergeObject(super.defaultOptions, {
         title: "Token Model Swaps",
         id: "token-swap-config",
-        template: "modules/swap-3d-tokens-on-combat/templates/settings.html",
+        template: "modules/auto-swap-3d-tokens-on-combat/templates/settings.html",
         width: 800,
         height: "auto",
         closeOnSubmit: true
@@ -13,7 +13,7 @@ class TokenSwapConfig extends FormApplication {
     }
   
     getData() {
-      const settings = game.settings.get("swap-3d-tokens-on-combat", "playerModels");
+      const settings = game.settings.get("auto-swap-3d-tokens-on-combat", "playerModels");
     
       const players = game.actors
       .filter(actor => actor.type === "character")
@@ -81,7 +81,7 @@ class TokenSwapConfig extends FormApplication {
           return;
         }
       
-        const authKey = game.settings.get("swap-3d-tokens-on-combat", "authKey") ?? "";
+        const authKey = game.settings.get("auto-swap-3d-tokens-on-combat", "authKey") ?? "";
         const browser = new HFBrowser(input.parent(), authKey);
         browser.render(true);
       
@@ -121,7 +121,7 @@ class TokenSwapConfig extends FormApplication {
         }
       
         console.log("💾 Processed settings to save:", newSettings);
-        await game.settings.set("swap-3d-tokens-on-combat", "playerModels", newSettings);
+        await game.settings.set("auto-swap-3d-tokens-on-combat", "playerModels", newSettings);
       }
       
       
@@ -148,7 +148,7 @@ Hooks.on("init", () => {
     restricted: true
   });
 
-  game.settings.register("swap-3d-tokens-on-combat", "authKey", {
+  game.settings.register("auto-swap-3d-tokens-on-combat", "authKey", {
     name: "HeroForge Auth Key",
     hint: "Paste your HeroForge authentication key here to access your models.",
     scope: "world",
