@@ -1,0 +1,35 @@
+{
+  "id": "auto-swap-3d-tokens-on-combat",
+  "title": "Auto Swap 3D Tokens on Combat",
+  "description": "Automatically swaps 3D models when combat starts and ends.",
+  "version": "1.1.0",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "13.337"
+  },
+  "authors": [
+    {
+      "name": "Steven VanLandingham",
+      "url": "https://famtickets.com",
+      "discord": "Surreal1481"
+    }
+  ],
+  "required": [
+    "three-actor-portrait",
+    "levels-3d-preview"
+  ],
+  "styles": ["styles.css"],
+  "esmodules": [
+    "swap.js",
+    "settings.js",
+    "HFBrowser.js"
+  ],
+  "templates": [
+  "templates/settings.html"
+  ],
+  "url": "https://github.com/surrealzerg/Foundry-Auto-Swap-3D-Tokens-On-Combat",
+  "manifest": "https://raw.githubusercontent.com/surrealzerg/Foundry-Auto-Swap-3D-Tokens-On-Combat/main/module.json",
+  "download": "https://raw.githubusercontent.com/surrealzerg/Foundry-Auto-Swap-3D-Tokens-On-Combat/main/auto-swap-3d-tokens-on-combat.zip",
+  "license": "MIT",
+  "languages": []
+}
