@@ -1,6 +1,6 @@
 console.log("Auto Swap 3D Tokens on Combat Module Loaded");
 
-const MODULE_ID = "swap-3d-tokens-on-combat";
+const MODULE_ID = "auto-swap-3d-tokens-on-combat";
 const FLAG_KEY = "flags.levels-3d-preview.model3d";
 
 /**
